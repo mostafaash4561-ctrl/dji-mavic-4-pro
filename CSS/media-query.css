@@ -1,0 +1,108 @@
+/* ---------- tablet & small laptop ---------- */
+@media (max-width: 1100px) {
+    .hero,
+    .reviews-layout {
+        grid-template-columns: 1fr;
+    }
+    .summary {
+        position: static;
+    }
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .footer-grid > div:first-child {
+        grid-column: 1 / -1;
+    }
+}
+
+/* ---------- below 768px (matches the PDF layout) ---------- */
+@media (max-width: 767px) {
+    .nav-links {
+        display: none;
+    }
+    .section {
+        padding: 80px 0;
+    }
+    .products,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* ---------- small phones ---------- */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 16px;
+    }
+    .section {
+        padding: 56px 0;
+    }
+    .section-header {
+        margin-bottom: 40px;
+    }
+    .section-header h2 {
+        font-size: 28px;
+    }
+    .section-header p,
+    .lead {
+        font-size: 17px;
+    }
+    .logo {
+        font-size: 20px;
+    }
+    .hero-img {
+        padding: 10px;
+    }
+    .hero-img img {
+        height: 280px;
+    }
+    .hero-img .badge {
+        top: 20px;
+        left: 20px;
+    }
+    .hero h1 {
+        font-size: 36px;
+    }
+    .prices strong {
+        font-size: 30px;
+    }
+    .btn {
+        padding: 14px 20px;
+        font-size: 16px;
+    }
+    .card {
+        padding: 20px;
+    }
+    .table-wrap {
+        padding: 8px;
+    }
+    table {
+        min-width: 680px;
+    }
+    th, td {
+        padding: 12px 8px;
+        font-size: 14px;
+    }
+    .winner {
+        padding: 16px;
+    }
+    .review-meta {
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        margin-left: 0;
+    }
+    .review-text {
+        font-size: 16px;
+    }
+    .payments {
+        gap: 12px;
+    }
+}
