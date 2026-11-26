@@ -1,108 +1,176 @@
 /* ---------- tablet & small laptop ---------- */
 @media (max-width: 1100px) {
-    .hero,
-    .reviews-layout {
-        grid-template-columns: 1fr;
-    }
-    .summary {
-        position: static;
-    }
-    .products {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .footer-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    .footer-grid > div:first-child {
-        grid-column: 1 / -1;
-    }
+  .nav-links {
+    gap: 20px;
+  }
+  .hero,
+  .reviews-layout {
+    grid-template-columns: 1fr;
+  }
+  .summary {
+    position: static;
+  }
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .footer-grid > div:first-child {
+    grid-column: 1 / -1;
+  }
 }
 
 /* ---------- below 768px (matches the PDF layout) ---------- */
+.navbar-toggle,
+.navbar-toggle-label {
+  display: none;
+}
+
 @media (max-width: 767px) {
-    .nav-links {
-        display: none;
-    }
-    .section {
-        padding: 80px 0;
-    }
-    .products,
-    .footer-grid {
-        grid-template-columns: 1fr;
-    }
-    .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-    }
+  .navbar {
+    border-bottom: 2px solid var(--accent-soft);
+    background-color: #f5f3ff;
+  }
+  .navbar .container {
+    position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px 0;
+    margin-top: 8px;
+    padding: 8px 16px;
+    background: transparent;
+  }
+  .navbar-toggle {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+  }
+  .navbar-toggle-label {
+    display: block;
+    width: 44px;
+    height: 40px;
+    margin-left: auto;
+    padding: 8px;
+    cursor: pointer;
+    background-color: #f5f3ff;
+    background: linear-gradient(
+      to bottom,
+      var(--text) 0 3px,
+      transparent 3px 10px,
+      var(--text) 10px 13px,
+      transparent 13px 20px,
+      var(--text) 20px 23px
+    ) center / 18px 23px no-repeat, #f5f3ff;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+    min-height: 210px;
+    padding: 20px 12px;
+    border-radius: 16px;
+    background-color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .navbar-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+  .navbar-toggle:focus-visible + .navbar-toggle-label {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+  }
+  .section {
+    padding: 80px 0;
+  }
+  .products,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 /* ---------- small phones ---------- */
 @media (max-width: 480px) {
-    .container {
-        padding: 0 16px;
-    }
-    .section {
-        padding: 56px 0;
-    }
-    .section-header {
-        margin-bottom: 40px;
-    }
-    .section-header h2 {
-        font-size: 28px;
-    }
-    .section-header p,
-    .lead {
-        font-size: 17px;
-    }
-    .logo {
-        font-size: 20px;
-    }
-    .hero-img {
-        padding: 10px;
-    }
-    .hero-img img {
-        height: 280px;
-    }
-    .hero-img .badge {
-        top: 20px;
-        left: 20px;
-    }
-    .hero h1 {
-        font-size: 36px;
-    }
-    .prices strong {
-        font-size: 30px;
-    }
-    .btn {
-        padding: 14px 20px;
-        font-size: 16px;
-    }
-    .card {
-        padding: 20px;
-    }
-    .table-wrap {
-        padding: 8px;
-    }
-    table {
-        min-width: 680px;
-    }
-    th, td {
-        padding: 12px 8px;
-        font-size: 14px;
-    }
-    .winner {
-        padding: 16px;
-    }
-    .review-meta {
-        flex-direction: row;
-        align-items: center;
-        width: 100%;
-        margin-left: 0;
-    }
-    .review-text {
-        font-size: 16px;
-    }
-    .payments {
-        gap: 12px;
-    }
+  .container {
+    padding: 0 16px;
+  }
+  .section {
+    padding: 56px 0;
+  }
+  .section-header {
+    margin-bottom: 40px;
+  }
+  .section-header h2 {
+    font-size: 28px;
+  }
+  .section-header p,
+  .lead {
+    font-size: 17px;
+  }
+  .logo {
+    font-size: 20px;
+  }
+  .nav-links {
+    column-gap: 14px;
+    font-size: 13px;
+  }
+  .hero-img {
+    padding: 10px;
+  }
+  .hero-img img {
+    height: 280px;
+  }
+  .hero-img .badge {
+    top: 20px;
+    left: 20px;
+  }
+  .hero h1 {
+    font-size: 36px;
+  }
+  .prices strong {
+    font-size: 30px;
+  }
+  .btn {
+    padding: 14px 20px;
+    font-size: 16px;
+  }
+  .card {
+    padding: 20px;
+  }
+  .table-wrap {
+    padding: 8px;
+  }
+  table {
+    min-width: 680px;
+  }
+  th,
+  td {
+    padding: 12px 8px;
+    font-size: 14px;
+  }
+  .winner {
+    padding: 16px;
+  }
+  .review-meta {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-left: 0;
+  }
+  .review-text {
+    font-size: 16px;
+  }
+  .payments {
+    gap: 12px;
+  }
 }
